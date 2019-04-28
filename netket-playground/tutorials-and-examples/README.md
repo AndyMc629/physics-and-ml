@@ -6,7 +6,11 @@ Had some issues running this due to the open MPI I had installed breaking.
 
 Steps:
 
-1. Run  $apt-cache search MPI | grep -w MPI| awk '{print $1}' | xargs dpkg -l 2>/dev/null to see what MPI packages you have installed.
+1. Run  
+```bash
+$apt-cache search MPI | grep -w MPI| awk '{print $1}' | xargs dpkg -l 2>/dev/null
+```
+to see what MPI packages you have installed.
 2. Then went through each library and ran (actually only needed to run one):
 $sudo apt remove LIBRARY
 $sudo apt autoremove LIBRARY
