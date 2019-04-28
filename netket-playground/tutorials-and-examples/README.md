@@ -8,12 +8,20 @@ Steps:
 
 1. Run  
 ```bash
-$apt-cache search MPI | grep -w MPI| awk '{print $1}' | xargs dpkg -l 2>/dev/null
+$ apt-cache search MPI | grep -w MPI| awk '{print $1}' | xargs dpkg -l 2>/dev/null
 ```
 to see what MPI packages you have installed.
 2. Then went through each library and ran (actually only needed to run one):
-$sudo apt remove LIBRARY
-$sudo apt autoremove LIBRARY
+```bash
+$ sudo apt remove LIBRARY
+$ sudo apt autoremove LIBRARY
+```
 3. Donwload the openmpi source, change to the openmpi installation directory and run
-$./configure --prefix=/usr/local --disable-dlopen
-4. run $make all install ... this takes a while 
+```bash
+$ ./configure --prefix=/usr/local --disable-dlopen
+```
+4. Run 
+```bash
+$ make all install 
+```
+... this takes a while 
